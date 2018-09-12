@@ -5,10 +5,7 @@
  */
 package hitungfibonacci;
 
-/**
- *
- * @author WINDOWS 10
- */
+import java.util.Scanner;
 public class HitungFibonacci {
     private static void tampilJudul(String identitas) {
         System.out.println("Identitas : "+ identitas);
@@ -16,9 +13,22 @@ public class HitungFibonacci {
         System.out.println("1, 1, 2, 3, 4, 5, 8, 13, 21, ... dst.\n");
     }
     
+    
+    private static int tampilInput(){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Bilangan ke-: ");
+        int n = scanner.nextInt();
+        
+        return n;
+    }
+    
     public static void main(String[] args) {
         String identitas = "Kinara F / XR3 / 16";
         
-        tampilJudul(identitas);        
+        tampilJudul(identitas); 
+        
+        int n = tampilInput();
     }
+    
 }
